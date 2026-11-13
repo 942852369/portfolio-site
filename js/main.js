@@ -61,19 +61,30 @@
       return document.getElementById(a.getAttribute("data-spy"));
     }).filter(Boolean);
 
+    // 页面正文在 #pageScroll 容器内滚动，window 本身不再滚动，
+    // 所以这里要按容器计算，不能用 window.scrollY。
+    var scroller = document.getElementById("pageScroll");
+    var sTop = function () { return scroller ? scroller.scrollTop : window.scrollY; };
+    var sMax = function () {
+      return scroller
+        ? scroller.scrollHeight - scroller.clientHeight
+        : document.documentElement.scrollHeight - window.innerHeight;
+    };
+    var sBase = function () { return scroller ? scroller.getBoundingClientRect().top : 0; };
+
     var updateSpy = function () {
-      var line = window.scrollY + 150;
+      var line = sTop() + 150;
       var currentSection = spySections[0];
       spySections.forEach(function (sec) {
-        var top = sec.getBoundingClientRect().top + window.scrollY;
+        var top = sec.getBoundingClientRect().top - sBase() + sTop();
         if (top <= line) currentSection = sec;
       });
       spyLinks.forEach(function (a) {
         a.classList.toggle("is-active", currentSection && a.getAttribute("data-spy") === currentSection.id);
       });
       if (progress) {
-        var max = document.documentElement.scrollHeight - window.innerHeight;
-        var pct = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+        var max = sMax();
+        var pct = max > 0 ? Math.min(1, Math.max(0, sTop() / max)) : 0;
         progress.style.width = (pct * 100).toFixed(2) + "%";
       }
     };
@@ -87,7 +98,7 @@
         ticking = false;
       });
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
+    (scroller || window).addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     updateSpy();
   }
