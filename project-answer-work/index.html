@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企业级 Agent 工作伙伴 Answer · 黄红艺作品集</title>
+  <meta name="description" content="企业级 Agent 工作伙伴 Answer — 从「聊天工具」到「工作入口」的产品与设计复盘：项目职责、用户画像、五个推演、五个设计方案与复盘。">
+  <meta property="og:title" content="Answer 企业级 AI 智能工作伙伴 · 黄红艺作品集">
+  <meta property="og:description" content="从「聊天工具」到「工作入口」：职责、画像、五个推演、五个设计方案与复盘。">
+  <meta property="og:type" content="article">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/case.css">
+</head>
+<body class="case-page">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><img src="../assets/img/logo.svg" alt="logo">黄红艺 · 作品集</a>
+      <nav>
+                <ul class="nav-links">
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="index.html">AI办公</a></li>
+          <li><a href="../project-answer/index.html">AI助手</a></li>
+          <li><a href="../project-talent/index.html">华为实训云平台</a></li>
+          <li><a href="../project-alarm/index.html">实时报警系统</a></li>
+          <li><a href="../design-system/index.html">设计规范</a></li>
+          <li><a href="../about-method/index.html">个人影响力</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="case-hero">
+      <div class="container">
+        <div class="case-hero__grid">
+          <div>
+            <span class="case-kicker">CASE 02 · AI办公 / 企业级通用智能助手</span>
+            <h1>企业级 Agent<br><em>工作伙伴 Answer</em></h1>
+            <p class="hero-sub">从「聊天工具」到「工作入口」· 产品与设计复盘</p>
+            <p class="hero-role">我以 PD + UXD 双重角色参与：定边界、搭骨架、做状态化交互、建反馈与迭代闭环——既判断「做不做」，也决定「长什么样」。</p>
+            <div class="hero-actions">
+              <a class="btn-pill btn-pill--primary" href="#s03">看推演 ↓</a>
+              <a class="btn-pill" href="#s12">看方案 ↓</a>
+              <a class="btn-pill" href="#s20">看复盘 ↓</a>
+            </div>
+          </div>
+          <figure class="hero-art">
+            <img src="../assets/product/answer-work/08-home.webp?v=20261111" alt="Answer（安Sir）首页：上传财报，直接问数并输出可视化" width="1800" height="1125" decoding="async" data-zoom title="点击查看大图">
+            <figcaption>首页 · 一次问数：从数据到可视化</figcaption>
+          </figure>
+        </div>
+
+        <div class="hero-metrics hero-metrics--3">
+          <div class="hero-metric">
+            <b>近 1000 <small>人</small></b>
+            <span>覆盖用户</span>
+          </div>
+          <div class="hero-metric">
+            <b>4.2</b>
+            <span>试点团队满意度</span>
+          </div>
+          <div class="hero-metric">
+            <b>1 <small>套</small></b>
+            <span>AI Agent 设计体系 · 45 个组件</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NAV ================= -->
+    <nav class="case-nav" data-case-nav aria-label="案例章节导航">
+      <div class="container case-nav__inner">
+        <a href="#s01" data-spy="s01">职责</a>
+        <a href="#s02" data-spy="s02">画像</a>
+        <a href="#s03" data-spy="s03">推演</a>
+        <a href="#s12" data-spy="s12">方案</a>
+        <a href="#s19" data-spy="s19">可信</a>
+        <a href="#s20" data-spy="s20">复盘</a>
+      </div>
+    </nav>
+
+    <!-- ================= 01 职责 ================= -->
+    <section class="case-sec" id="s01">
+      <div class="container">
+        <div class="sec-mark"><i></i>01 · 项目职责</div>
+        <h2 class="sec-title"><em>角色定位：</em>我在这件事里的位置</h2>
+        <p class="sec-lead">PD 决定「做不做」，UXD 决定「长什么样」，两条线都不越位——但都要对同一个结果负责。</p>
+
+        <div class="rt-wrap">
+          <table class="rt rt--duty">
+            <thead>
+              <tr>
+                <th>职责线</th>
+                <th>我负责的</th>
+                <th>关键产出</th>
+                <th>验收标准</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>产品判断 · PD</td>
+                <td>定位与边界、能力取舍、北极星与多目标</td>
+                <td>PRD、边界文档、四类状态枚举</td>
+                <td>每个需求都写清北极星、多目标取舍与不做什么</td>
+              </tr>
+              <tr>
+                <td>体验设计 · UXD</td>
+                <td>入口收敛、状态化组件、异常 / 空态 / 阻断、反馈链路与埋点</td>
+                <td>交互稿、组件规范、状态规则、埋点定义</td>
+                <td>界面不承诺系统做不到的事；禁用态都有原因</td>
+              </tr>
+              <tr>
+                <td>落地协作</td>
+                <td>内审机制、研发与评测对齐、灰度发布与效果回填</td>
+                <td>内审规则、灰度开关、看板字段</td>
+                <td>高风险方案在开发前被拦下，效果能回填到看板</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pills">
+          <span class="pill">不做垂直场景</span>
+          <span class="pill">不为技术债做 UI 补丁</span>
+          <span class="pill">不承诺没埋点的效果</span>
+        </div>
+
+        <p class="case-body">一条自检：如果我只能留下一样东西，那应该是<b>可被复用的判断标准</b>，而不是某一版界面。</p>
+      </div>
+    </section>
+
+    <!-- ================= 02 画像 ================= -->
+    <section class="case-sec" id="s02">
+      <div class="container">
+        <div class="sec-mark"><i></i>02 · 用户画像</div>
+        <h2 class="sec-title"><em>权责区分：</em>AI 不替人背锅</h2>
+        <p class="sec-lead">AI 负责「找、拼、改、校验」这类高频低风险环节；人负责「结论确认、权限与承诺」这类低频高风险环节。</p>
+
+        <div class="rt-wrap">
+          <table class="rt rt--persona">
+            <thead>
+              <tr>
+                <th>角色</th>
+                <th>核心任务</th>
+                <th>频次 · 痛点</th>
+                <th>AI 可介入（提效）</th>
+                <th>人必须把关（兜底）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>一线员工</td>
+                <td>查制度与流程、找数据、写文档周报、总结群聊与会议</td>
+                <td>极高 · 找不到、重复劳动</td>
+                <td>意图识别、知识检索、总结提炼、起草与排版</td>
+                <td>结论是否可用、是否对外表达</td>
+              </tr>
+              <tr>
+                <td>部门主管</td>
+                <td>看团队使用、识别卡点、推动落地</td>
+                <td>中 · 信息不全、口径不一</td>
+                <td>汇总对比、使用情况、卡点预警</td>
+                <td>是否推广、是否对外承诺</td>
+              </tr>
+              <tr>
+                <td>合规 / IT</td>
+                <td>权限、数据安全、审计与留痕</td>
+                <td>中 · 风险大、责任重</td>
+                <td>权限继承、桌面端本地处理、操作留痕</td>
+                <td>授权、审计、签字担责</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pills">
+          <span class="pill">AI 找 / 拼 / 改 / 校验</span>
+          <span class="pill">人确认结论与权限</span>
+          <span class="pill">界面不替人签字</span>
+        </div>
+
+        <p class="case-body">这张表决定了后面每一个设计动作：凡是 <b>AI 能做的</b>，就不该让用户填表；凡是 <b>人必须负责的</b>，界面就不能替他点「确认」。</p>
+
+        <p class="case-body">目标不是把功能做多，而是让用户只记一个入口、敢把任务交出去、失败时知道为什么。</p>
+      </div>
+    </section>
+
+    <!-- ================= PART I ================= -->
+    <section class="case-part">
+      <div class="container case-part__inner">
+        <div>
+          <span class="case-part__k">PART I</span>
+          <div class="case-part__t">推演：先把「为什么」写清楚</div>
+        </div>
+        <p class="case-part__d">五个判断——边界、骨架、入口与状态、数据、机制。每一个都先写结论，再写因果与取舍。</p>
+      </div>
+    </section>
+
+    <!-- ================= 03 推演 01 边界 ================= -->
+    <section class="case-sec" id="s03">
+      <div class="container">
+        <div class="sec-mark"><i></i>03 · 推演 01 / 边界</div>
+        <h2 class="sec-title"><em>能力边界：</em>先决定不做什么</h2>
+        <p class="sec-lead">Answer 只做「入口」，不做垂直场景；把垂域能力封装成工具，交给主 Agent 调度。</p>
+
+        <div class="chain">
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">信息散在 WeLink 文档、群聊、知识中心、BI、代码仓库；跨系统办事要反复复制粘贴；敏感数据不敢上云。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">导致</span>
+            <p class="chain-v">一天里大量时间花在「找」和「搬」上，真正的判断被切碎；<b>所以需要一个懂公司知识、能跨系统执行的通用入口</b>。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">但是</span>
+            <p class="chain-v">如果通用助手什么都做，既做不深，又会和垂直业务团队正面冲突，用户面对多个助手只会<b>选错一次就不再信任</b>。</p>
+          </div>
+          <div class="chain-row chain-row--end">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">确立战略边界：<b>Chat 是入口，垂域是能力</b>。主 Agent 负责意图分发与权限校验；解决方案生成、合规审核等垂域助手经 A2A 封装为工具，由主 Agent 统一决策调用，办公与专业隔离。</p>
+          </div>
+        </div>
+
+        <p class="case-body">这条边界写进 PRD 的第一页，后续所有需求都在这个框架下展开——用户只需要记住一个入口。</p>
+
+        <figure class="boundary">
+          <div class="boundary-flow">
+            <div>
+              <span class="boundary-k">入口 / 只做一个</span>
+              <div class="boundary-box boundary-box--hero"><b>Answer</b><span>通用办公场景助手</span></div>
+            </div>
+            <div class="boundary-arrow" aria-hidden="true">→</div>
+            <div>
+              <span class="boundary-k">调度</span>
+              <div class="boundary-box"><b>主 Agent</b><span>意图识别 · 分发</span></div>
+            </div>
+            <div class="boundary-arrow" aria-hidden="true">→</div>
+            <div>
+              <span class="boundary-k">能力 / A2A 工具</span>
+              <div class="boundary-tools">
+                <span class="boundary-tool boundary-tool--on">解决方案生成</span>
+                <span class="boundary-tool boundary-tool--on">合规审核</span>
+                <span class="boundary-tool">其他垂域助手</span>
+              </div>
+              <span class="boundary-note">垂域团队保留自己的落地空间</span>
+            </div>
+          </div>
+          <div class="boundary-rules">
+            <div class="boundary-rule"><b>规则 01 · 入口只留一个</b><span>用户不必先判断自己属于哪一类</span></div>
+            <div class="boundary-rule"><b>规则 02 · 能力各自生长</b><span>垂域助手封装成可调用工具</span></div>
+            <div class="boundary-rule"><b>规则 03 · 办公与专业隔离</b><span>数据、权限不跨域</span></div>
+          </div>
+          <figcaption class="boundary-caption">能力边界：Answer 是入口，垂域是能力 · 解决方案生成 / 合规审核 作为工具被调度</figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ================= 04 推演 02 骨架 ================= -->
+    <section class="case-sec" id="s04">
+      <div class="container">
+        <div class="sec-mark"><i></i>04 · 推演 02 / 骨架</div>
+        <h2 class="sec-title"><em>产品骨架：</em>一个入口，四个「能」，三种形态</h2>
+        <p class="sec-lead">用「四个能」定义价值，用「三种形态」定义场景，用「四个全」定义底座。</p>
+
+        <div class="chain">
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">用户的日常需求跨度极大——查资料、干活、造东西、让助手越用越懂自己，单一问答接不住。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">拆成四个「能」：<b>能查</b>（知识 / 数据 / 会议 / 文档）、<b>能干活</b>（任务执行 / 自动化）、<b>能创造</b>（建技能 / 出成品）、<b>能成长</b>（记忆与偏好）。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">使用场景的物理位置不同：在群里随手问、在电脑前深度工作、处理不方便上云的本地文件。</p>
+          </div>
+          <div class="chain-row chain-row--end">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">三种形态：<b>Bot 最无缝</b>、<b>Web 最沉浸</b>、<b>Pro 最安全</b>。三端共用一套知识与记忆，形态只决定「在哪用」，不决定「能不能用」。</p>
+          </div>
+        </div>
+
+        <div class="stack" aria-label="产品全景：四个全、四个能、三种形态">
+          <div class="stack-row">
+            <span class="stack-k">底座 · 四个「全」</span>
+            <div class="stack-cells">
+              <div class="stack-cell"><b>入口全</b><span>Bot / Web / 桌面 / 业务系统</span></div>
+              <div class="stack-cell"><b>知识全</b><span>知识中心 + WeLink + 数据 + 联网</span></div>
+              <div class="stack-cell"><b>工具全</b><span>解决方案生成 / 合规审核 / MCP</span></div>
+              <div class="stack-cell"><b>记忆全</b><span>短期上下文 + 长期记忆，跨端延续</span></div>
+            </div>
+          </div>
+          <div class="stack-arrow">↓</div>
+          <div class="stack-row stack-row--accent">
+            <span class="stack-k">价值 · 四个「能」</span>
+            <div class="stack-cells">
+              <div class="stack-cell"><b>能查</b><span>知识 · 数据 · 会议 · 文档</span></div>
+              <div class="stack-cell"><b>能干活</b><span>任务执行 · 自动化</span></div>
+              <div class="stack-cell"><b>能创造</b><span>建技能 · 出成品</span></div>
+              <div class="stack-cell"><b>能成长</b><span>越用越懂你</span></div>
+            </div>
+          </div>
+          <div class="stack-arrow">↓</div>
+          <div class="stack-row">
+            <span class="stack-k">场景 · 三种形态</span>
+            <div class="stack-cells">
+              <div class="stack-cell"><b>WeLink Bot</b><span>最无缝：在群聊里随叫随到</span></div>
+              <div class="stack-cell"><b>网页端</b><span>最沉浸：长文阅读与复杂任务</span></div>
+              <div class="stack-cell"><b>桌面端 PRO</b><span>最安全：数据不出本机</span></div>
+              <div class="stack-cell"><b>同一套知识与记忆</b><span>形态只决定「在哪用」</span></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="case-body">四个「全」决定能力上限，四个「能」决定用户感知——用户只记得住「能干什么」，不会记得「接了什么」。</p>
+
+        <h3 class="case-sub">协作模型：六步循环</h3>
+        <p class="case-body">我把理想中的协作拆成六步。它不是一个一次性的流水线：任何一步发现信息不足，都要能回到上一步，或者停下来问人。</p>
+        <div class="pipeline">
+          <div class="pipeline-step"><span class="no">01</span><h3>理解目标</h3><p>用户要的是答案，还是一个能交出去的结果。</p></div>
+          <div class="pipeline-step"><span class="no">02</span><h3>获取上下文</h3><p>知识、文件、记忆、会话历史，按任务装配。</p></div>
+          <div class="pipeline-step"><span class="no">03</span><h3>思考规划</h3><p>拆子任务，决定用技能、工具还是子智能体。</p></div>
+          <div class="pipeline-step"><span class="no">04</span><h3>执行任务</h3><p>调用、观察、再判断，过程对用户可见。</p></div>
+          <div class="pipeline-step"><span class="no">05</span><h3>验证结果</h3><p>主 Agent 校验、补引用、标注不确定。</p></div>
+          <div class="pipeline-step"><span class="no">06</span><h3>人机协作</h3><p>确认、修改、撤回，或把这次执行沉淀为能力。</p></div>
+        </div>
+
+        <h3 class="case-sub">人机分工：AI 把事做完，人决定做到哪</h3>
+        <p class="case-body">AI 负责理解目标、补齐上下文、规划步骤、执行与自检；人负责定目标、给权限、做取舍、承担后果。这条分工线，决定了界面上什么该自动、什么该停下来。</p>
+
+        <figure class="case-fig">
+          <img src="../assets/img/answer-division.webp" alt="AI 与人各自负责的边界，以及自动执行、需要确认、可以撤回三类动作" loading="lazy" decoding="async" width="1600" height="614" data-zoom>
+          <figcaption>分工与权限：AI 把事做完 / 人决定做到哪 · 自动、确认、可撤回</figcaption>
+        </figure>
+
+        <p class="case-body">我把系统的动作收敛成三类：自动执行（只读检索、知识问答、低风险生成）、需要确认（写操作、对外发送、授权与付费、覆盖或删除）、可以撤回（生成、发送、任务变更都留暂停 / 重试 / 撤销的出口）。</p>
+
+        <p class="case-body">「请求批准」不是一个弹窗，而是人和 AI 之间的权限边界。边界越清楚，用户越敢把更大的任务交出去。</p>
+      </div>
+    </section>
+
+    <!-- ================= 05 推演 03 入口与状态 ================= -->
+    <section class="case-sec" id="s06">
+      <div class="container">
+        <div class="sec-mark"><i></i>05 · 推演 03 / 入口与状态</div>
+        <h2 class="sec-title"><em>入口与状态：</em>把承诺还给系统</h2>
+        <p class="sec-lead">互斥交给 Agent 判断，默认值交给用户显式选择——入口和状态，都不该替系统做承诺。</p>
+
+        <div class="chain">
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">前端硬编码「选了助手就不能传文件 / 用技能」；知识源有 3 个入口，全量用户中仅约 700 人使用且极易选错。首页又自动恢复历史配置、勾选「企业知识」，把用户要用的工具顶掉；模型无输出时仍摆着「复制 / 分享」，任务失败仍有点赞。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">导致</span>
+            <p class="chain-v">任务直接报错，用户无法理解「为什么选了助手就不能传文件」；<b>无感知失败</b>与<b>无效点击</b>同时发生，解释成本高于功能本身，信任被一点点磨掉。</p>
+          </div>
+          <div class="chain-row chain-row--end">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">取消前端硬约束，改由 Agent 做意图识别与冲突消解；三个知识源入口收敛成一个下拉，并支持个人快捷入口。企业知识改为手动触发；Feedback 按任务状态收敛展示前提——无输出不显示复制与分享，失败不显示点赞，分享的对话整组隐藏反馈。</p>
+          </div>
+        </div>
+
+        <h3 class="case-sub">两个动作：入口收成一个，状态写成枚举</h3>
+        <div class="cards cards--2">
+          <div class="card">
+            <span class="card-k">动作 01 · 入口</span>
+            <span class="card-t">从「前端拦截」到「Agent 消解」</span>
+            <span class="card-d">先画互斥矩阵（文件 / 指令、skill / 文件、skill / 指令、助手 × 三者），再定两组术语（显式信号 vs 自然语言、Query 优先 vs Tool 优先），最后给路由规则：仅强命中才走子代理直出，其余回主 Agent 校验。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">动作 02 · 状态</span>
+            <span class="card-t">从「隐形默认」到「显式选择」</span>
+            <span class="card-d">企业知识不再自动勾选；无 markdown 输出不显示复制与分享，任务失败不显示点赞，分享出去的对话整组隐藏反馈；点踩在绝大多数状态保留。</span>
+          </div>
+        </div>
+
+        <figure class="case-fig">
+          <img src="../assets/img/answer-route.webp" alt="主 Agent 对文件、技能、指令与助手做冲突消解与路由" loading="lazy" decoding="async" width="1600" height="727" data-zoom>
+          <figcaption>入口：前端不再拦截 · 强命中才走子代理，其余回主 Agent 校验</figcaption>
+        </figure>
+
+        <figure class="case-fig">
+          <img src="../assets/img/answer-taskstates.webp" alt="任务从待处理到成功的主状态与异常、人工出口" loading="lazy" decoding="async" width="1600" height="321" data-zoom>
+          <figcaption>状态：主链路 + 异常分支 + 人的出口 · 失败不是终点</figcaption>
+        </figure>
+
+        <h3 class="case-sub">失败不是终点，是一个有下一步的状态</h3>
+        <div class="cards cards--4">
+          <div class="card">
+            <span class="card-k">授权过期</span>
+            <span class="card-t">就地重新授权</span>
+            <span class="card-d">不用回设置里找，一步回到任务。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">工具失败</span>
+            <span class="card-t">重试，保留已完成步骤</span>
+            <span class="card-d">不从头再跑，长任务不白等。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">结果不可信</span>
+            <span class="card-t">补引用、标不确定</span>
+            <span class="card-d">不假装确定，把判断权交回人。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">任务跑偏</span>
+            <span class="card-t">暂停、改目标，再继续</span>
+            <span class="card-d">不用终止重开，保留上下文。</span>
+          </div>
+        </div>
+        <p class="case-body">恢复不是一句「请重试」，而是一条有顺序的阶梯——重试、重规划、降级、转人工、回滚。完整规则见 <a href="#s19-1">13.1</a>。</p>
+      </div>
+    </section>
+
+    <!-- ================= 06 推演 04 数据闭环 ================= -->
+    <section class="case-sec" id="s08">
+      <div class="container">
+        <div class="sec-mark"><i></i>06 · 推演 04 / 数据闭环</div>
+        <h2 class="sec-title"><em>反馈闭环：</em>把「情绪」变成「可定位的问题」</h2>
+        <p class="sec-lead">反馈的价值不在数量，在于能不能直接分派给一个负责人。</p>
+
+        <div class="chain">
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">用户点踩后大多不填原因，旧流程「场景空值」导致人工分单效率低，这批记录被统一标记「暂不处理」。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">导致</span>
+            <p class="chain-v">反馈等于白收：产品拿不到可迭代的信息，只能凭印象排期，改完之后也无法证明有没有变好。</p>
+          </div>
+          <div class="chain-row chain-row--end">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">标签升级为「问题类型 + 所属模块」<b>两级强制选择</b>，选完自动映射模块跟进人；未选标签提交置灰；后台可配置（草稿 / 发布 / 回滚 / 兜底）。</p>
+          </div>
+        </div>
+
+        <p class="case-body">两轮通用场景问卷，按场景而不是功能设计选项；同时按周汇总点踩、表单、团队、群聊四路反馈。7 月 1–20 日共 <b>85 条</b>（点踩 27 / 表单 11 / 团队 14 / 群聊 33），其中 BUG <b>22 条</b>。四条链路一起看，才拼得出问题现场。</p>
+        <p class="case-body">北极星定为「<b>答案有效率</b>」，拆成三层指标落到质量看板五个专题。反馈处理周报固定统计总量、BUG 数、处理率与负责人排行；产品把「点了没说原因」的记录单独计数，作为下一个动作的输入。</p>
+
+        <figure class="fb-figure">
+          <div class="fb-flow">
+            <div class="fb-left">
+              <div class="fb-row"><span>点踩记录</span><b>27</b></div>
+              <div class="fb-row"><span>用户反馈表</span><b>11</b></div>
+              <div class="fb-row"><span>团队反馈</span><b>14</b></div>
+              <div class="fb-row"><span>群聊反馈</span><b>33</b></div>
+              <div class="fb-row fb-row--total"><span>7.1–7.20 合计</span><b>85</b></div>
+            </div>
+            <div class="fb-arrow" aria-hidden="true">→</div>
+            <div class="fb-mid">
+              <span class="fb-k">STEP 01 / 可定位</span>
+              <span class="fb-t">两级标签</span>
+              <div class="fb-tags">
+                <span class="fb-tag">问题类型</span>
+                <span class="fb-tag--x">×</span>
+                <span class="fb-tag">所属模块</span>
+              </div>
+              <p class="fb-note">选完自动映射跟进人。未选标签，提交按钮置灰；旧版 6 个单层标签退场。后台支持两级标签、主表映射、草稿 / 发布 / 回滚与兜底，调整不再等研发发版。</p>
+            </div>
+            <div class="fb-arrow" aria-hidden="true">→</div>
+            <div class="fb-right">
+              <div class="fb-row"><span>BUG</span><b>22 条</b></div>
+              <div class="fb-row"><span>周报固定统计</span><b>总量 / 处理率</b></div>
+              <div class="fb-row"><span>负责人排行</span><b>按模块</b></div>
+              <p>质量看板 4 个专题：路由 / 回答 / 体验 / 安全，逐段定位问题。</p>
+            </div>
+          </div>
+          <figcaption class="fb-caption">反馈从「收到情绪」变成「收到可定位的问题」；分派自动落到人，标签调整从研发发版降为后台配置。（85 条 / BUG 22 条）</figcaption>
+        </figure>
+
+        <p class="case-body">这些指标怎么变成发布闸门，见 <a href="#s19-2">13.2</a>。</p>
+      </div>
+    </section>
+
+    <!-- ================= 07 推演 05 机制 ================= -->
+    <section class="case-sec" id="s10">
+      <div class="container">
+        <div class="sec-mark"><i></i>07 · 推演 05 / 机制</div>
+        <h2 class="sec-title"><em>机制设计：</em>先画理想体验，再倒推架构</h2>
+        <p class="sec-lead">团队最大的风险不是做错，是把一年前的架构当成边界。</p>
+
+        <div class="chain">
+          <div class="chain-row">
+            <span class="chain-k">因为</span>
+            <p class="chain-v">团队长期在现有功能上做正向迭代，把第一版架构当成不可动的约束，评审时大量时间花在理解名词与方案表面。</p>
+          </div>
+          <div class="chain-row">
+            <span class="chain-k">导致</span>
+            <p class="chain-v">只优化表面，错过范式级机会；同一类短板（北极星不端到端、多目标冲突、架构易推倒）反复出现，却没人纠正。</p>
+          </div>
+          <div class="chain-row chain-row--end">
+            <span class="chain-k">所以</span>
+            <p class="chain-v">内审推行强制顺序：<b>先画理想链路 → 再推架构 → 最后按技术约束取舍</b>；评审必须带「异常 / 空态 / 阻断 / 进度」四类稿。</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <span class="card-k">Decision 01</span>
+            <span class="card-t">ReAct Agent + Toolset</span>
+            <span class="card-d">机器人从固定流程改为「思考—调用—观察」循环。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">Decision 02</span>
+            <span class="card-t">子代理工具化</span>
+            <span class="card-d">子代理统一封装为工具（解决方案生成、合规审核等），由主 Agent 调度与校验。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">Decision 03</span>
+            <span class="card-t">三端架构统一</span>
+            <span class="card-d">知识问答三端共用一套链路，Q3 前收敛。</span>
+          </div>
+        </div>
+
+        <p class="case-body">策略要落到架构：机器人重构为 ReAct Agent + Toolset，子代理统一封装为工具，三端知识问答 Q3 前统一。这三项决策不是技术偏好，而是前面六步循环的必要条件。</p>
+        <p class="case-body">一次内审完成 <b>7 个需求</b>评审，并把个案结论沉淀为团队标准（Top 10 意图、准确性优先于完整性、任务路由不显性化）。</p>
+
+        <figure class="case-fig">
+          <img src="../assets/img/answer-architecture.webp" alt="从理想体验推导架构要求与三项架构决策" loading="lazy" decoding="async" width="1600" height="621" data-zoom>
+          <figcaption>架构承接：理想体验 → 架构要求 → 三项决策（ReAct / 工具化 / 三端统一）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= PART II ================= -->
+    <section class="case-part">
+      <div class="container case-part__inner">
+        <div>
+          <span class="case-part__k">PART II</span>
+          <div class="case-part__t">设计方案：四个界面，一套组件</div>
+        </div>
+        <p class="case-part__d">推演里说过的每件事，在这里都要有一个看得见的样子——从主界面开始，逐个落到真实页面。</p>
+      </div>
+    </section>
+
+    <!-- ================= 08 方案 01 主界面 ================= -->
+    <section class="case-sec" id="s12">
+      <div class="container">
+        <div class="sec-mark"><i></i>08 · 方案 01 / 主界面</div>
+        <h2 class="sec-title"><em>主界面：</em>一个输入框，装下所有信号</h2>
+        <p class="sec-lead">入口只有一个——文件、技能、助手与自然语言在同一个框里共存，路由交给系统。</p>
+
+        <figure class="case-fig">
+          <img src="../assets/product/answer-work/09-input.webp?v=20261111" alt="一个输入框：用 / 唤起本地文件、智能体、WeLink 文档、表格、联系人与群" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+          <figcaption>一个输入框：输入 / 唤起所有信号，选完即挂到当前任务</figcaption>
+        </figure>
+
+        <div class="anno">
+          <div class="anno-item">
+            <span class="anno-n">1</span>
+            <div class="anno-t">输入即入口</div>
+            <div class="anno-d">一个输入框，用 / 唤起本地文件、智能体、WeLink 文档、表格、联系人与群；不用先判断自己属于哪一类。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">2</span>
+            <div class="anno-t">先选信号，不先选场景</div>
+            <div class="anno-d">知识源、技能、助手都是输入的一部分；任务类型仍由 query 决定，冲突交给 Agent 判断。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">3</span>
+            <div class="anno-t">路由不显性化</div>
+            <div class="anno-d">用户不需要知道背后调了哪个 Agent；系统只回一行「已分派 · 知识中心」，答案里带来源。</div>
+          </div>
+        </div>
+
+        <h3 class="case-sub">两个高频场景</h3>
+        <div class="fig-2">
+          <figure class="case-fig">
+            <img src="../assets/product/answer-work/01-knowledge.webp?v=20261111" alt="知识问答与引用角注" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+            <figcaption>查资料：回答带引用角注，参考来源可展开，点踩留在反馈区</figcaption>
+          </figure>
+          <figure class="case-fig">
+            <img src="../assets/product/answer-work/02-preview.webp?v=20261111" alt="对话与产物预览同屏" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+            <figcaption>写内容：对话与产物同屏，可切换预览 / 代码、全屏查看</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 09 方案 02 入口收敛 ================= -->
+    <section class="case-sec" id="s13">
+      <div class="container">
+        <div class="sec-mark"><i></i>09 · 方案 02 / 入口收敛</div>
+        <h2 class="sec-title"><em>入口收敛：</em>三个入口，收成一个下拉</h2>
+        <p class="sec-lead">把「选入口」这件事从用户手里拿走——知识源是输入的一部分，不是场景的一部分。</p>
+
+        <figure class="case-fig">
+          <img src="../assets/product/answer-work/07-entry.webp?v=20261111" alt="三个入口收成一个知识源下拉：知识中心、WeLink 文档、联网搜索" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+          <figcaption>知识源下拉：知识中心 / WeLink 文档 / 联网搜索，按来源分组</figcaption>
+        </figure>
+
+        <div class="anno">
+          <div class="anno-item">
+            <span class="anno-n">1</span>
+            <div class="anno-t">知识源是输入的一部分</div>
+            <div class="anno-d">不再是「先选场景，再选知识源」；在输入框里加一个 chip，任务类型仍由 query 决定。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">2</span>
+            <div class="anno-t">一个下拉承接三个旧入口</div>
+            <div class="anno-d">企业知识 / 知识中心 / WeLink / 群聊 / 数据平台按来源分组，但共用同一个入口与同一套权限。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">3</span>
+            <div class="anno-t">来源与权限一起可见</div>
+            <div class="anno-d">每个来源显示可见数量（知识中心 180 / WeLink 文档 4），权限跟着账号走，不需要额外申请。</div>
+          </div>
+        </div>
+
+        <p class="case-body">先用最低成本的交互调整（1 周内上线），不重构整个信息架构；入口从三个收敛为一个，用户不再需要在入口层做判断。</p>
+      </div>
+    </section>
+
+    <!-- ================= 10 方案 03 看回放 ================= -->
+    <section class="case-sec" id="s15">
+      <div class="container">
+        <div class="sec-mark"><i></i>10 · 方案 03 / 看回放</div>
+        <h2 class="sec-title"><em>任务回放：</em>把任务能力，演一遍给用户看</h2>
+        <p class="sec-lead">看不懂就不会用。用 10–20 秒的回放替代一段产品介绍文案。</p>
+
+        <div class="shot shot--replay">
+          <div class="ui" style="height:100%">
+            <div class="ui-bar"><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-bar-t">首页 · 优质案例</span><span class="ui-bar-r">06 CASES</span></div>
+            <div class="ui-cases">
+              <div class="ui-case">
+                <div class="ui-case-hd">REPLAY 00:14</div>
+                <div class="ui-case-bd">
+                  <div class="ui-case-t">写一份部门周报</div>
+                  <div class="ui-case-m">数据分析 · 文档生成</div>
+                  <div class="ui-case-acts"><span class="ui-btn ui-btn--sm">看回放</span><span class="ui-btn ui-btn--sm">做同款</span></div>
+                </div>
+              </div>
+              <div class="ui-case">
+                <div class="ui-case-hd">REPLAY 00:18</div>
+                <div class="ui-case-bd">
+                  <div class="ui-case-t">总结昨天会议结论</div>
+                  <div class="ui-case-m">会议洞察 · 待办</div>
+                  <div class="ui-case-acts"><span class="ui-btn ui-btn--sm">看回放</span><span class="ui-btn ui-btn--sm">做同款</span></div>
+                </div>
+              </div>
+              <div class="ui-case">
+                <div class="ui-case-hd">REPLAY 00:11</div>
+                <div class="ui-case-bd">
+                  <div class="ui-case-t">7 天群聊问题汇总</div>
+                  <div class="ui-case-m">知识问答 · 表格</div>
+                  <div class="ui-case-acts"><span class="ui-btn ui-btn--sm">看回放</span><span class="ui-btn ui-btn--sm">做同款</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="ui-replay">
+              <div class="ui-replay-head"><b>回放：写一份部门周报</b><span>00:07 / 00:14 · 不消耗 TOKEN</span></div>
+              <div class="ui-steps">
+                <div class="ui-step"><b>STEP 01</b>理解意图，确认数据范围</div>
+                <div class="ui-step"><b>STEP 02</b>调用数据平台，取 6 个指标</div>
+                <div class="ui-step"><b>STEP 03</b>生成周报结构与图表</div>
+                <div class="ui-step"><b>STEP 04</b>输出文档，可转待办</div>
+              </div>
+              <div class="ui-progress"></div>
+              <div style="display:flex;align-items:center;gap:10px;margin-top:auto">
+                <span class="ui-btn ui-btn--sm">重播</span>
+                <span class="ui-btn ui-btn--sm">查看完整对话</span>
+                <span class="ui-btn ui-btn--primary ui-btn--sm" style="margin-left:auto">做同款</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anno">
+          <div class="anno-item">
+            <span class="anno-n">1</span>
+            <div class="anno-t">用「结果」当广告，不用文案</div>
+            <div class="anno-d">三张案例卡就是三个真实任务：写周报、会议洞察、群聊汇总——都是「每周都要做一次」的高频事。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">2</span>
+            <div class="anno-t">四步分镜，10–20 秒说完</div>
+            <div class="anno-d">节奏 = 总时长 ÷ step 数；内容固定、无随机、不消耗 Token，才能「每次看都一样」。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">3</span>
+            <div class="anno-t">看懂了就让他直接做</div>
+            <div class="anno-d">「做同款」带入原始 query 发起真实生成；埋点 case_card_click → replay_start → do_same_start，量出从看到用的转化。</div>
+          </div>
+        </div>
+
+        <div class="pills">
+          <span class="pill">稳定无随机</span>
+          <span class="pill">不消耗 Token</span>
+          <span class="pill">10–20 秒看完</span>
+          <span class="pill">观感真实</span>
+        </div>
+
+        <figure class="case-fig">
+          <img src="../assets/product/answer-work/05-process.webp?v=20261111" alt="任务执行过程中的深度思考、技能、命令与子智能体" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+          <figcaption>跑任务：处理过程逐条外显，顶部同步耗时、技能与文档调用量</figcaption>
+        </figure>
+        <p class="case-body">长任务最怕黑箱：不知道跑到哪、失败为什么、下一步做什么。处理过程被摊平成一行行可展开的记录——深度思考、使用技能、执行命令、阅读文件、使用子智能体、浏览网页；任务面板显示 3/4 步与耗时。</p>
+      </div>
+    </section>
+
+    <!-- ================= 11 方案 04 反馈标签 ================= -->
+    <section class="case-sec" id="s16">
+      <div class="container">
+        <div class="sec-mark"><i></i>11 · 方案 04 / 反馈标签</div>
+        <h2 class="sec-title"><em>反馈标签：</em>点踩之后，多问一句</h2>
+        <p class="sec-lead">不逼用户写小作文，只让他选一个类型；附件与日志自动带上，剩下的交给系统。</p>
+
+        <figure class="case-fig">
+          <img src="../assets/product/answer-work/06-feedback.webp?v=20261111" alt="点踩之后的反馈弹窗：选择问题类型，自动附带日志与会话" loading="lazy" decoding="async" width="1800" height="1125" data-zoom>
+          <figcaption>点踩之后：先选类型，再自动带上日志与会话</figcaption>
+        </figure>
+
+        <div class="anno">
+          <div class="anno-item">
+            <span class="anno-n">1</span>
+            <div class="anno-t">类型先分流</div>
+            <div class="anno-d">技术问题、产品建议、使用咨询——先归大类，不让用户判断该找谁。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">2</span>
+            <div class="anno-t">证据自动带上</div>
+            <div class="anno-d">最近 24 小时本地日志脱敏打包，连同当前会话 ID 一起提交，研发可直接复现。</div>
+          </div>
+          <div class="anno-item">
+            <span class="anno-n">3</span>
+            <div class="anno-t">后台再做两级分派</div>
+            <div class="anno-d">提交后进入「问题类型 × 所属模块」与自动分派；修复后回归通过才算关闭（见 13.3）。</div>
+          </div>
+        </div>
+
+        <p class="case-body">反馈从「收到情绪」变成「收到可定位的问题」，并自动分派到人；标签调整从「研发发版」降为「后台配置」——草稿 / 发布 / 回滚 / 兜底，异常时回退到最近有效版本。</p>
+      </div>
+    </section>
+
+    <!-- ================= 12 方案 05 体系 ================= -->
+    <section class="case-sec" id="s18">
+      <div class="container">
+        <div class="sec-mark"><i></i>12 · 方案 05 / 体系</div>
+        <h2 class="sec-title"><em>体系设计：</em>四层架构，七步工作流</h2>
+        <p class="sec-lead">单个场景好用不够，要让它可扩展、可预期、可恢复。</p>
+
+        <h3 class="case-sub">四层架构：层间只传四类东西</h3>
+        <p class="case-body">把界面拆开看，Answer 不是一排功能的集合，而是四层接力：入口收集信号、主 Agent 编排、能力层执行、支撑层兜底。层间只传四类东西：信号、指令、结果、事件。</p>
+        <figure class="case-fig">
+          <img src="../assets/img/answer-arch.webp" alt="Answer 的入口层、编排层、能力层与支撑层" loading="lazy" decoding="async" width="1600" height="633" data-zoom>
+          <figcaption>模块架构：入口 / 编排 / 能力 / 支撑四层 · 层间只传信号、指令、结果、事件</figcaption>
+        </figure>
+        <h3 class="case-sub">七步工作流：一个 ReAct 循环</h3>
+        <p class="case-body">策略层的六步循环，落到系统里是七步：收信号、判意图、装配上下文、定计划、执行循环、校验、输出与回流。第 5 步会回到第 4 步反复循环——这也是 ReAct Agent 与「一次问答」最大的区别。</p>
+        <figure class="case-fig">
+          <img src="../assets/img/answer-agent.webp" alt="Agent 七步工作流与三层调用栈" loading="lazy" decoding="async" width="1600" height="697" data-zoom>
+          <figcaption>工作流：七步 + 一个 ReAct 循环 · 三层调用栈与三个闸门</figcaption>
+        </figure>
+        <p class="case-body">同一套工作流，入口不同，路由分五类：直答、调技能、派子智能体、拆任务、定时。</p>
+        <p class="case-body">以一次真实任务为例：主 Agent 调用技能「每周工作总结」→ 执行 WeLink 命令拉日历 → 读 3 个文件 → 派子智能体「智能问数」分析 → 浏览网页补信息 → 主 Agent 合成周报；任务面板同步显示 3/4 步。</p>
+
+        <h3 class="case-sub">协同与沉淀：从一句话到一张任务卡</h3>
+        <p class="case-body">自动化任务把输入框、主 Agent、技能、任务面板、通知、反馈串成一条长链路，最能说明模块之间怎么交接。从一句自然语言到一张可暂停的任务卡，中间要过五个环节：描述、成单、调度、执行、回流。</p>
+        <figure class="case-fig">
+          <img src="../assets/img/answer-collab.webp" alt="自动化任务从描述、成单、调度、执行到回流的链路" loading="lazy" decoding="async" width="1600" height="402" data-zoom>
+          <figcaption>协同链路：自然语言 → 任务配置 → 定时触发 → 任务对话 → 结果推送 / 失败重试</figcaption>
+        </figure>
+        <p class="case-body">靠三条规则：单一编排者、上下文随任务、失败有着落；失败分支与评测口径见 <a href="#s19-1">13.1</a> / <a href="#s19-2">13.2</a>。</p>
+      </div>
+    </section>
+
+    <!-- ================= PART III ================= -->
+    <section class="case-part">
+      <div class="container case-part__inner">
+        <div>
+          <span class="case-part__k">PART III</span>
+          <div class="case-part__t">评测：让 Agent 可信、可恢复、可迭代</div>
+        </div>
+        <p class="case-part__d">上线不是终点。先定义怎么评，再定义失败怎么恢复，最后把每次 badcase 变成下一条评测用例。</p>
+      </div>
+    </section>
+
+    <!-- ================= 13 可信与演进 ================= -->
+    <section class="case-sec" id="s19">
+      <div class="container">
+        <div class="sec-mark"><i></i>13 · 评测 / 可信与演进</div>
+        <h2 class="sec-title"><em>可信体系：</em>评测、恢复与迭代</h2>
+        <p class="sec-lead">Agent 的质量不能靠一次演示证明；要有离线评测、在线指标、人工评审三层证据，失败要有恢复阶梯，badcase 要能变成回归用例。</p>
+
+        <h3 class="case-sub" id="s19-1">13.1 思考与恢复：失败时，下一步是什么</h3>
+        <p class="case-body">ReAct 不是让模型自由发挥：每一步都要有观察、校验和停止条件。计划—行动—观察—再计划；当信息足够、风险不允许、或必须由人做决定时，停下来。</p>
+        <p class="case-body">我把停止条件收敛成三类：</p>
+        <div class="cards">
+          <div class="card">
+            <span class="card-k">停止 01</span>
+            <span class="card-t">信息足够</span>
+            <span class="card-d">可以直接回答或交付结果，不再调用工具，避免「为了显得努力而多跑几步」。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">停止 02</span>
+            <span class="card-t">需要人确认</span>
+            <span class="card-d">写操作、对外发送、授权与付费，先问人；确认点就是权限边界。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">停止 03</span>
+            <span class="card-t">不允许</span>
+            <span class="card-d">越权、合规红线、能力边界外，直接拒绝，并给一条能走通的替代路径。</span>
+          </div>
+        </div>
+
+        <p class="case-body">思考过程只对用户暴露三件事：<b>正在做什么、为什么停下来、下一步是什么</b>；不展示无意义的「内心独白」。</p>
+        <p class="case-body">失败不是异常，是产品的一部分。恢复要按阶梯走，而不是一句「请重试」：</p>
+        <div class="ladder">
+          <div class="ladder-step"><i>STEP 01</i><b>重试</b><span>同工具换参数，最多 1–2 次；不做无限重试。</span></div>
+          <div class="ladder-step"><i>STEP 02</i><b>重规划</b><span>换路径、拆子任务、换工具；保留已完成步骤。</span></div>
+          <div class="ladder-step"><i>STEP 03</i><b>降级</b><span>直答、给部分结果、标注缺口；不假装完成。</span></div>
+          <div class="ladder-step"><i>STEP 04</i><b>转人工</b><span>接管、工单、审批；把上下文一起交出去。</span></div>
+          <div class="ladder-step"><i>STEP 05</i><b>回滚</b><span>撤销已执行动作，恢复现场；可撤回是底线。</span></div>
+        </div>
+
+        <div class="rt-wrap">
+          <table class="rt rt--recovery">
+            <thead>
+              <tr><th>失败模式</th><th>检测信号</th><th>恢复动作</th><th>用户看到什么</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>工具失败</td><td>超时 / 报错 / 返回空</td><td>重试 → 换工具 → 保留已完成步骤</td><td>「第 3 步失败，已保留前 2 步，可重试或继续」</td></tr>
+              <tr><td>授权过期</td><td>401 / 权限校验失败</td><td>就地重新授权，回到原任务</td><td>卡片上的「重新授权」，不用回设置里找</td></tr>
+              <tr><td>结果不可信</td><td>无引用 / 引用不匹配 / 低置信</td><td>补引用、标不确定、转人工核验</td><td>「这条结论缺少来源，建议核对原文」</td></tr>
+              <tr><td>任务跑偏</td><td>目标漂移 / 步骤重复 / 超出范围</td><td>暂停、改目标、重新规划</td><td>「当前方向可能偏了，要调整目标吗？」</td></tr>
+              <tr><td>上下文超限</td><td>token 接近上限 / 历史过长</td><td>摘要、丢弃低相关上下文、拆任务</td><td>「已保留关键上下文，长对话已压缩」</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="case-body">恢复的三条原则：<b>不假装确定</b>（缺来源就说缺）、<b>不从头再来</b>（保留已完成步骤）、<b>不让用户猜</b>（每个失败态都有下一步）。</p>
+
+        <h3 class="case-sub" id="s19-2">13.2 评测：四层评测，三道闸门</h3>
+        <p class="case-body">演示能骗人，评测集不能。四层评测分别回答：该不该做、做没做完、答得对不对、会不会出事。</p>
+        <div class="rt-wrap">
+          <table class="rt rt--eval">
+            <thead>
+              <tr><th>评测层</th><th>评什么</th><th>怎么测</th><th>放行标准</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>意图与路由</td><td>该不该调工具、调哪个、是否强命中子代理</td><td>Top 意图标注集 + 反例集；路由结果可解释</td><td>核心意图不低于基线；误路由能定位到规则</td></tr>
+              <tr><td>任务与工具</td><td>步骤完整、工具与参数正确、能否恢复</td><td>会话回放 + 自动断言 + 人工抽检</td><td>任务完成率不降；失败必须有恢复路径</td></tr>
+              <tr><td>答案与引用</td><td>准确、完整、可追溯、不编造</td><td>人工抽样 + 引用核验 + 对抗提问</td><td>引用缺失或编造 = 不通过</td></tr>
+              <tr><td>安全与权限</td><td>越权、敏感数据、合规红线</td><td>红队用例 + 权限矩阵 + 规则校验</td><td>P0 零放行；越权即回滚</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="case-body">评测结果不直接等于发布，要过三道闸门：</p>
+        <div class="cards">
+          <div class="card">
+            <span class="card-k">Gate 01</span>
+            <span class="card-t">离线回归</span>
+            <span class="card-d">版本发布前跑全量评测集；核心意图不下降，P0 安全问题零放行，失败恢复用例必须通过。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">Gate 02</span>
+            <span class="card-t">灰度</span>
+            <span class="card-d">小流量 → 扩大 → 全量；盯任务完成率、点踩率、人工接管率；异常一键回滚。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">Gate 03</span>
+            <span class="card-t">全量与看板</span>
+            <span class="card-d">答案有效率、任务完成率、一次通过率、badcase 关闭率进入周度复盘，不靠印象判断。</span>
+          </div>
+        </div>
+
+        <p class="case-body">指标不求多，要能定位到层：意图层看误路由，任务层看完成率与恢复步数，答案层看引用与准确，安全层看越权与 P0。<b>任何一层出问题，都能回到对应的评测集。</b></p>
+
+        <h3 class="case-sub" id="s19-3">13.3 迭代：把一次 badcase，变成一条回归用例</h3>
+        <p class="case-body">迭代不是「再调一版 prompt」，而是让每一次线上失败都变成一条可重复执行的用例。否则同类问题会以另一种形式再出现。</p>
+        <div class="loop-layout">
+          <div class="react-steps">
+            <div class="react-step"><span class="n">01</span><div><b>反馈归因</b><p>点踩两级标签，落到模块与意图；只收情绪不算闭环。</p></div></div>
+            <div class="react-step"><span class="n">02</span><div><b>复现</b><p>会话回放 + 日志 + 工具调用链，先还原现场再改。</p></div></div>
+            <div class="react-step"><span class="n">03</span><div><b>沉淀用例</b><p>query + 期望结果 + 判定规则，进入评测集。</p></div></div>
+            <div class="react-step"><span class="n">04</span><div><b>修复</b><p>prompt / 技能 / 工具 / 路由 / 界面，改在最靠近根因的一层。</p></div></div>
+            <div class="react-step"><span class="n">05</span><div><b>回归 + 灰度</b><p>全量评测集回归，再小流量验证；不过不发布。</p></div></div>
+            <div class="react-step"><span class="n">06</span><div><b>看板 + 下一轮</b><p>关闭率、通过率、接管率回到看板，进入下一轮排序。</p></div></div>
+          </div>
+
+          <aside class="loop-side">
+            <div class="loop-side__k">闭环 / LOOP · 三条硬规则</div>
+            <div class="loop-rule"><b>节奏</b><span>周度 badcase 评审，固定版本节奏；不攒到月底一次清。</span></div>
+            <div class="loop-rule"><b>版本化</b><span>prompt / 技能 / 工具 / 评测集都带版本；发布前必须跑回归。</span></div>
+            <div class="loop-rule"><b>反哺</b><span>一个 badcase 至少沉淀一条用例；修复后回归通过才算关闭。</span></div>
+            <div class="loop-note">优先级：P0 安全 / 权限 &gt; P1 高频失败 &gt; P2 体验 &gt; P3 长尾；按影响面 × 严重度排序。</div>
+            <div class="loop-quote">闭环不是六个动作，<br>是<em>同一类问题不再出现</em>。</div>
+            <div class="loop-side__foot">
+              <span>反馈</span><i>→</i><span>用例</span><i>→</i><span>修复</span><i>→</i><span>回归</span><i>↺</i>
+            </div>
+          </aside>
+        </div>
+
+        <p class="case-body"><b>三个反模式：</b>只修个案、不沉淀用例，同类问题会反复出现；改了不回归，修一个坏三个；指标不回填，永远无法证明变好。</p>
+      </div>
+    </section>
+
+    <!-- ================= 14 复盘 ================= -->
+    <section class="case-sec" id="s20">
+      <div class="container">
+        <div class="sec-mark"><i></i>14 · 复盘与沉淀</div>
+        <h2 class="sec-title"><em>项目复盘：</em>做对了三件事，也留下继续验证的空间</h2>
+        <p class="sec-lead">能被证明的写进结果，没回填的明确标「待补」——不把过程当成果。</p>
+
+        <div class="cards">
+          <div class="card">
+            <span class="card-k">对用户</span>
+            <span class="card-t">入口 3→1，失败有下一步</span>
+            <span class="card-d">反馈从情绪变成可定位的问题；任务过程可见，失败不再只报错。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">对产品</span>
+            <span class="card-t">从问答框到工作入口</span>
+            <span class="card-d">四层架构 + 七步工作流 + 评测闭环；北极星「答案有效率」拆成三层。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">对团队</span>
+            <span class="card-t">判断有了可复用的标准</span>
+            <span class="card-d">评测集、恢复阶梯、badcase 闭环沉淀为团队方法，不靠个人经验。</span>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <span class="card-k">01 战略克制</span>
+            <span class="card-t">明确边界，才敢少做</span>
+            <span class="card-d">「Chat 是入口，垂域是能力」——先写边界，再谈功能。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">02 包装技术</span>
+            <span class="card-t">用状态化设计兜住不确定</span>
+            <span class="card-d">把脆弱的互斥逻辑，藏进确定的交互与文案里。</span>
+          </div>
+          <div class="card">
+            <span class="card-k">03 验证前置</span>
+            <span class="card-t">先定义怎么评，再谈怎么改</span>
+            <span class="card-d">没有回归集，改完也无法证明变好；评测比演示更重要。</span>
+          </div>
+        </div>
+
+        <div class="honest">
+          <span class="honest-k">诚实反思 · 已埋点、待看板回填</span>
+          <p>任务完成率、一次通过率、平均恢复步数、人工接管率、badcase 关闭率与回归通过率，以及入口迁移后的误选率、看回放 → 做同款的转化漏斗——指标已定义并埋点，但尚未回填成看板默认视图；「通用场景问卷结果」因权限未读取，相关结论未做定量承诺。</p>
+        </div>
+
+        <p class="case-body">AI 体验设计，设计的是人与 AI 共同完成工作的规则。</p>
+        <p class="case-body">如果重来一次，我会更早把「可撤回」和失败态做成系统能力，而不是逐页补按钮。下一步不是再加功能，而是把待补的指标回填成看板默认视图，让每一次设计判断都能被验证。</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>黄红艺 · AI 产品设计师</span>
+      <span class="footer-contact">
+        <a href="mailto:942852369@qq.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>942852369@qq.com</a>
+        <a href="tel:+8615158893193"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></svg>+86 151 5889 3193</a>
+        <a href="../index.html">← 返回作品集</a>
+      </span>
+    </div>
+  </footer>
+
+  <div class="lb" data-lb aria-hidden="true">
+    <button class="lb-close" type="button" data-lb-close aria-label="关闭大图">×</button>
+    <img alt="" data-lb-img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  </div>
+
+  <script src="../js/main.js?v=20261111"></script>
+</body>
+</html>

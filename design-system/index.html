@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUANG Design System · 黄红艺作品集</title>
+  <meta name="description" content="HUANG Design System —— Answer 产品设计规范：颜色、字体、间距、图形、页面框架与组件。">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    html, body { height: 100%; }
+    body.spec-page {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+    }
+    body.spec-page .site-header { flex: 0 0 auto; }
+    .spec-embed { position: relative; flex: 1 1 auto; min-height: 0; background: #fff; }
+    .spec-embed iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="spec-page">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><img src="../assets/img/logo.svg" alt="logo">黄红艺 · 作品集</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="../project-answer-work/index.html">AI办公</a></li>
+          <li><a href="../project-answer/index.html">AI助手</a></li>
+          <li><a href="../project-talent/index.html">华为实训云平台</a></li>
+          <li><a href="../project-alarm/index.html">实时报警系统</a></li>
+          <li><a class="active" href="index.html">设计规范</a></li>
+          <li><a href="../about-method/index.html">个人影响力</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="spec-embed">
+    <iframe id="specFrame" title="HUANG Design System 设计规范" loading="eager"></iframe>
+  </div>
+
+  <script>
+  (function () {
+    /* 外层 hash 记录 iframe 当前模块，刷新后按原模块载入 */
+    var frame = document.getElementById('specFrame');
+    var match = location.hash.match(/^#\/?([a-z]+)$/);
+    var hash = match ? '#/' + match[1] : '';
+    if (!hash) {
+      try {
+        var saved = sessionStorage.getItem('huang-ds-route');
+        if (saved && /^[a-z]+$/.test(saved)) hash = '#/' + saved;
+      } catch (e) {}
+    }
+    frame.src = 'spec.html' + hash;
+
+    window.addEventListener('message', function (e) {
+      if (e.source !== frame.contentWindow) return;
+      var data = e.data;
+      if (!data || data.type !== 'huang-ds-route' || !/^[a-z]+$/.test(data.route)) return;
+      var next = '#/' + data.route;
+      if (location.hash !== next) {
+        try { history.replaceState(null, '', next); } catch (err) {}
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>
